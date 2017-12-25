@@ -40,7 +40,9 @@ public class ProductService {
     }
 
 
-
+    public List<Product> findAllProducts(){
+        return (List<Product>) productRepository.findAll();
+    }
 
     public List<Product> findByCategory(String category){
         return productRepository.findByCategory(category);

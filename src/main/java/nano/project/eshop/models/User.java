@@ -5,6 +5,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "customer")
@@ -32,6 +33,8 @@ public class User {
 	
 	@Column(name = "enabled")
 	private Boolean enabled;
+
+
 	
 	@Column(name = "confirmation_token")
 	private String confirmationToken;
@@ -41,6 +44,9 @@ public class User {
 
 	@Column(name = "user_role")
 	private String role;
+
+	@OneToMany(mappedBy="user")
+	private List<Order> order;
 
 	public String getRole() {
 		return role;

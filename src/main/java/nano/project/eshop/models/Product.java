@@ -40,16 +40,16 @@ public class Product {
         this.details = details;
     }
 
-    public String getPhoto() {
+    public byte[] getPhoto() {
         return photo;
     }
 
-    public void setPhoto(String photo) {
+    public void setPhoto(byte[] photo) {
         this.photo = photo;
     }
 
     @Column(name = "photo")
-    private String photo;
+    private byte[] photo;
 
     public Long getId() {
         return id;

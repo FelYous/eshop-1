@@ -16,13 +16,13 @@ public class Product {
     private Long id;
 
     @Column(name = "quantity")
-    private Integer quantity;
+    private int quantity;
 
     @Column(name = "category")
     private String category;
 
     @Column(name = "price")
-    private Float price;
+    private float price;
 
     @org.hibernate.search.annotations.Field
     @Field
@@ -51,7 +51,7 @@ public class Product {
     @Column(name = "photo")
     private String photo;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -75,11 +75,11 @@ public class Product {
         this.category = category;
     }
 
-    public Float getPrice() {
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 

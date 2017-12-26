@@ -32,11 +32,11 @@
                         <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                             <thead>
                             <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Details</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -44,11 +44,11 @@
                             <!--/*@thymesVar id="product" type="nano.project.eshop.models.Product"*/-->
                             <th:block th:each="product : ${products}">
                             <tr class="odd gradeX">
-                                <td>Trident</td>
-                                <td>Internet Explorer 4.0</td>
-                                <td>Win 95+</td>
-                                <td class="center">4</td>
-                                <td class="center">X</td>
+                                <td><p th:text="${product.getName()}"></p> </td>
+                                <td><p th:text="${product.getCategory()}"></p> </td>
+                                <td><p th:text="${product.getQuantity()}"></p> </td>
+                                <td><p th:text="${product.getPrice()}"></p> </td>
+                                <td><p th:text="${product.getDetails()}"></p> </td>
                             </tr>
                             </tbody>
                         </table>

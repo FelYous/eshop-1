@@ -5,6 +5,7 @@ import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
 import javax.persistence.*;
+import java.io.File;
 
 @org.hibernate.search.annotations.Indexed
 @SolrDocument(solrCoreName = "product")
@@ -40,16 +41,16 @@ public class Product {
         this.details = details;
     }
 
-    public byte[] getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 
-    public void setPhoto(byte[] photo) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
 
     @Column(name = "photo")
-    private byte[] photo;
+    private String photo;
 
     public Long getId() {
         return id;

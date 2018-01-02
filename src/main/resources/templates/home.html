@@ -107,18 +107,18 @@ _________________________________________________________ -->
                                 <div class="flipper">
                                     <div class="front">
                                         <a th:href="@{/product-details(id=${product.getId()})}">
-                                            <img th:src="@{${product.getPhoto()}}" alt="" class="img-responsive"/>
+                                            <img th:src="@{${product.getPhoto()}}" alt="notfound" class="img-responsive"/>
                                         </a>
                                     </div>
                                     <div class="back">
                                         <a th:href="@{/product-details(id=${product.getId()})}">
-                                            <img th:src="@{${product.getPhoto()}}" alt="" class="img-responsive"/>
+                                            <img th:src="@{${product.getPhoto()}}" alt="notfound" class="img-responsive"/>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <a th:href="@{/product-details(id=${product.getId()})}" class="invisible">
-                                <img th:src="@{${product.getPhoto()}}" alt="" class="img-responsive"/>
+                                <img th:src="@{${product.getPhoto()}}" alt="not found" class="img-responsive"/>
                             </a>
                             <div class="text">
                                 <h3><a th:href="@{/product-details(id=${product.getId()})}" th:text="${product.getName()}"></a></h3>

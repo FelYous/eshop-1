@@ -23,7 +23,6 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-
     public Product save(Product product){
         return productRepository.save(product);
     }
@@ -59,8 +58,8 @@ public class ProductService {
         return  productRepository.countByCategory(category);
     }
 
-    public void delete(long id) {
-        productRepository.delete(id);
+    public void delete(Product product) {
+        productRepository.delete(product);
     }
 
 
